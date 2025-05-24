@@ -1,21 +1,36 @@
     import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+    import "simplelightbox/dist/simple-lightbox.min.css";
 
 
 const refs = {
   allGallery: document.querySelector('.gallery'),
   loader: document.querySelector('.loader'),
+  loadMoreBtn: document.querySelector('.load-more'),
+  bottomLoader: document.querySelector('.loader-bottom'),
 };
 
 ////////////////////////////////////////////////////////////
+export function showLoaderBottom() { 
+  refs.bottomLoader.classList.remove('hidden');
+}
+export function hideLoaderBottom() { 
+  refs.bottomLoader.classList.add('hidden');
+}
+////////////////////////////////////////////////////////////
 export function showLoader() {
-    refs.loader.classList.remove('hidden');
+  refs.loader.classList.remove('hidden');
 }
 export function hideLoader(){
-    refs.loader.classList.add('hidden');
+  refs.loader.classList.add('hidden');
 }
 export function clearGallery() {
   refs.allGallery.innerHTML = '';
+}
+export function hideLoadMoreButton() {
+  refs.loadMoreBtn.classList.add('hidden');
+}
+export function showLoadMoreButton() {
+  refs.loadMoreBtn.classList.remove('hidden');
 }
 ////////////////////////////////////////////////////////////
 
@@ -61,9 +76,10 @@ export function createMarkup(image) {
 }
 
 export function createGallery(images) {
-    refs.allGallery.innerHTML = images.map(createMarkup).join('');
+    refs.allGallery.insertAdjacentHTML('beforeend', images.map(createMarkup).join(''));
     lightbox.refresh();
 }
 
 /////////////////////////////////////////////////////////////////////////
+
 

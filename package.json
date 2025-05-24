@@ -2,11 +2,11 @@
   "name": "vanilla-app-template",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://oleksandrt434.github.io/goit-js-hw-11",
+  "homepage": "https://oleksandrt434.github.io/goit-js-hw-12",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/goit-js-hw-11/",
+    "build": "vite build --base=/goit-js-hw-12/",
     "preview": "vite preview"
   },
   "devDependencies": {
