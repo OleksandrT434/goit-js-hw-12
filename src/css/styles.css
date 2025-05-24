@@ -1,0 +1,145 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+
+
+[type="text"]{
+  width: 272px;
+  height: 40px;
+  border-radius: 4px
+  ;font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding-left: 16px;
+  border: 1px solid #ccc;
+}
+
+[type="submit"]{
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  margin-left: 8px;
+}
+
+[type="text"]:hover{
+  border: #090909;
+}
+
+[type="submit"]:hover {
+  border: #6c8cff;
+}
+ body{
+  background-color: #ebebeb;
+ }
+
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+  margin-bottom: 32px;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  justify-content: center;
+  row-gap: 24px;
+  column-gap: 24px;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
+.gallery-item{
+  border: 1px solid #808080;
+}
+.image-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4px;
+}
+
+.stat-block {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.value {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.hidden{
+  display: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border: 2px solid #FF3D00;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border: 2px solid #FFF;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
