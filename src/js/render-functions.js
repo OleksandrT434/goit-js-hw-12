@@ -10,7 +10,8 @@ const refs = {
 };
 
 ////////////////////////////////////////////////////////////
-export function showLoaderBottom() { 
+export function showLoaderBottom() {
+  console.log('Нижній спінер');
   refs.bottomLoader.classList.remove('hidden');
 }
 export function hideLoaderBottom() { 
